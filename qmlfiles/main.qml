@@ -12,7 +12,7 @@ Window {
     //width: 240; height: 240
 
     color: "#00000000" //"#001f1f1f"
-    flags: Qt.Dialog | Qt.FramelessWindowHint | Qt.WindowSystemMenuHint
+    flags: Qt.Dialog | Qt.FramelessWindowHint | Qt.WindowSystemMenuHint | Qt.WindowStaysOnTopHint
 
     MouseArea {
         anchors.fill: parent
@@ -32,15 +32,15 @@ Window {
         anchors.centerIn: parent
         anchors.fill: parent
         system: particleSystem
-        emitRate: 10
-        lifeSpan: 2000
-        lifeSpanVariation: 100
+        emitRate: 20
+        lifeSpan: 1500
+        lifeSpanVariation: 500
         size: 32
-        endSize: 512
+        endSize: 768
 
         velocity: AngleDirection {
             angle: 0
-            angleVariation: 15
+            angleVariation: 360
             magnitude: 100
             magnitudeVariation: 50
         }
